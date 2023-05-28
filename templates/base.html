@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+    <title>Chatbot</title>
+</head>
+<body>
+    <div class="container">
+        <div class="chatbox">
+            <div class="chatbot_support">
+                <div class="chatbot_header">
+                    <div class="chatbox__image--header">
+                        <img src="chats.png" alt="image">
+                    </div>
+                    <div class="chatbox_content_header">
+                        <h4 class="chatbox__heading">Chat Support</h4>
+                    </div>
+                </div>
+                <div class="chatbox_messages">
+                    <div></div>
+                </div>
+                <div class="chatbox__footer">
+                    <input type="text" placeholder="Writ a message...">
+                    <button class="chatbox--footer--sendButton">Send</button>
+                </div>
+            </div>
+            <div class="chatbox_button">
+                <button><img src="{{url_for('static',filename='chats.png')}}" alt=""></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script>
+        $SCRIPT_ROOT = {{request.script_root | tojson}};
+    </script> -->
+    <script type="text/javascript" src="{{url_for('static',filename='script.js')}}"></script>
+    
+</body>
+</html>
