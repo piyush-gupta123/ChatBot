@@ -4,33 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+    <link rel="stylesheet" href="../static/styles.css">
     <title>Chatbot</title>
 </head>
 <body>
     <div class="container">
-        <div class="chatbox">
-            <div class="chatbot_support">
-                <div class="chatbot_header">
-                    <div class="chatbox__image--header">
-                        <img src="chats.png" alt="image">
-                    </div>
-                    <div class="chatbox_content_header">
-                        <h4 class="chatbox__heading">Chat Support</h4>
-                    </div>
-                </div>
-                <div class="chatbox_messages">
-                    <div></div>
-                </div>
-                <div class="chatbox__footer">
-                    <input type="text" placeholder="Writ a message...">
-                    <button class="chatbox--footer--sendButton">Send</button>
-                </div>
-            </div>
-            <div class="chatbox_button">
-                <button><img src="{{url_for('static',filename='chats.png')}}" alt=""></button>
-            </div>
-        </div>
+        <button class="button"><img class="image" src="../static/chats.png" alt="Image"></button>
+        <div class="chat-window" id="myForm">
+            <form action="action.js"></form>
+
+        </div>w
     </div>
 
     <!-- <script>
