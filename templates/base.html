@@ -1,25 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/styles.css" />
     <title>Chatbot</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <button class="button"><img class="image" src="../static/chats.png" alt="Image"></button>
-        <div class="chat-window" id="myForm">
-            <form action="action.js"></form>
+      <button class="button" id="main" onclick="openForm()">
+        <img
+          class="image"
+          src="../static/chats.png"
+          alt="Image"
+          onclick="openForm()"
+        />
+      </button>
 
-        </div>w
+      <div class="chat-window" id="myForm">
+        <div class="close"><button onclick="closeForm()">X</button></div>
+        <form method="post" class="form-container">
+          <h3 class="heading">Chat With Us</h3>
+          <div class="subdiv">
+            <label for="message" class="label"> Message: </label>
+            <input type="text" name="message" id="message" />
+            <input type="submit" value="Send" id="send" />
+          </div>
+        </form>
+      </div>
     </div>
 
     <!-- <script>
         $SCRIPT_ROOT = {{request.script_root | tojson}};
     </script> -->
-    <script type="text/javascript" src="{{url_for('static',filename='script.js')}}"></script>
-    
-</body>
+    <script>
+      const main = document.getElementById("main");
+      const myForm = document.getElementById("myForm");
+      const send = document.getElementById("send");
+
+      function openForm() {
+        myForm.style.display = "block";
+      }
+
+      const closeForm = () => {
+        myForm.style.display = "none";
+      };
+    </script>
+  </body>
 </html>

@@ -1,10 +1,9 @@
 *{
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
 }
 
-.container{
-    display: flex;
+body{
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .button{
@@ -16,6 +15,7 @@
     border: none;
     border-radius: 10px;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .image{
@@ -25,5 +25,69 @@
     width: 50px;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+.chat-window{
+    display: none;
+    bottom: 30px;
+    right: 30px;
+    position: fixed;
+    z-index: 9;
+    height: 300px;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+.heading{
+    font-size: 25px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 700;
+}
+
+.label{
+    font-size: 16px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+
+.close{
+    display: flex;
+    flex-direction: row;
+    background-color: lightgray ;
+    justify-content: flex-end;
+    /* right: 0px; */
+}
+
+.close button{
+    margin: 2px;
+}
+
+.form-container{
+    background-color: lightgray;
+    width: 300px;
+    padding: 10px;
+    height: 272px;
+}
+
+.subdiv{
+    
+}
+
+.form-container input{
+    width: 100%;
+    padding: 10px;
+    background: #f1f1f1;
+    border: none;
+    resize: none;
+}
+
+#send{
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
 }
 
