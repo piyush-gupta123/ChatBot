@@ -84,7 +84,6 @@ body{
     flex-direction: column;
 } */
 
-
 .input{
     /* margin-top: 60px; */
     width: 100%;
@@ -96,11 +95,18 @@ body{
     border-radius: 20px;
 }
 
+.input:focus{
+    background-color: #ddd;
+    outline: none;
+}
+
 .sendbtn{
     right: 0;
     border: none;
     background: none;
+    cursor: pointer;
 }
+
 
 .sendimg{
     height: 30px;
