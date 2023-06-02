@@ -1,72 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../static/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap"
-      rel="stylesheet"
-    />
+<link rel="stylesheet" href="../static/styles.css">
+
+<head>
+    <meta charset="UTF-8">
     <title>Chatbot</title>
-  </head>
-  <body>
-    <div class="container">
-      <button class="button" id="main" onclick="openForm()">
-        <img
-          id="image"
-          class="image"
-          src="../static/chats.png"
-          alt="Image"
-          
-        />
-      </button>
-
-      <div class="chat-window" id="myForm">
-        <!-- <div class="close"></div> -->
-        <form action="" method="" class="form-container">
-          <div class="first">
-            <button class="close" onclick="closeForm()">X</button>
-            <h3 class="heading">Talk To Us</h3>
-          </div>
-          <hr>
-          <div class="subdiv">
-            <!-- <hr class="hr"> -->
-            <input
-              type="text"
-              name="message"
-              id="message"
-              placeholder="Type Your Message Here..."
-              class="input"
-            />
-            <button class="sendbtn"><img class="sendimg" src="../static/send.png"  alt="send"></button>
-          </div>
-        </form>
-      </div>
+</head>
+<body>
+<div class="container">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Chat support</h4>
+                    <p class="chatbox__description--header">Hi. My name is Sam. How can I help you?</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button><img src="../static/chats.png" width="50px" height="50px" /></button>
+        </div>
     </div>
+</div>
 
-    <!-- <script>
-        $SCRIPT_ROOT = {{request.script_root | tojson}};
-    </script> -->
-    <script>
-      const main = document.getElementById("main");
-      const myForm = document.getElementById("myForm");
-      const send = document.getElementById("send");
-      const image = document.getElementById("image")
+    <script src="../static/app.js"></script>
 
-
-      function openForm() {
-        image.style.visibility = "hidden";
-        myForm.style.display = "block";
-      }
-
-      const closeForm = () => {
-        myForm.style.display = "none";
-        image.style.visibility = "visible";
-      };
-    </script>
-  </body>
+</body>
 </html>
