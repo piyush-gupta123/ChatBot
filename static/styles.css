@@ -65,9 +65,10 @@ body{
 
 .subdiv{
     display: flex;
-    position: fixed;
+    position: absolute;
+    width: 100%;
     bottom: 0;
-    margin-bottom: 5%;
+    margin-bottom: 4%;
     margin-left: 1%;
 }
 
@@ -80,19 +81,19 @@ body{
     cursor: pointer;
 }
 
-/* .hr{
+hr{
     flex-direction: column;
-} */
+    margin-top: 73%;
+}
 
 .input{
-    /* margin-top: 60px; */
     width: 100%;
     padding: 12px;
     background: lightgray;
     border: none;
     resize: none;
     margin-left: 5px;
-    border-radius: 20px;
+    border-radius: 17px;
 }
 
 .input:focus{
@@ -107,11 +108,11 @@ body{
     cursor: pointer;
 }
 
-
 .sendimg{
     height: 30px;
     width: 28px;
     right: 0;
     bottom: 0;
 }
+
 

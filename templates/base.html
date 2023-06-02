@@ -27,12 +27,12 @@
 
       <div class="chat-window" id="myForm">
         <!-- <div class="close"></div> -->
-        <form action="" method="post" class="form-container">
+        <form action="" method="" class="form-container">
           <div class="first">
             <button class="close" onclick="closeForm()">X</button>
             <h3 class="heading">Talk To Us</h3>
           </div>
-          
+          <hr>
           <div class="subdiv">
             <!-- <hr class="hr"> -->
             <input
@@ -59,13 +59,13 @@
 
 
       function openForm() {
-        //image.style.visibility = "hidden";
+        image.style.visibility = "hidden";
         myForm.style.display = "block";
       }
 
       const closeForm = () => {
         myForm.style.display = "none";
-        //image.style.visibility = "visible";
+        image.style.visibility = "visible";
       };
     </script>
   </body>
